@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .resume-section div {
+      display: block; /* Make sure the div is visible by default */
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <h1>Static Resume</h1>
+
+    <!-- Personal Information Section -->
+    <section id="personal-info" class="resume-section">
+      <h2>Personal Information</h2>
+      <div>
+        <img id="profile-pic" src="./Image/profile.jpeg" alt="Profile Picture" width="100" height="100">
+        <p><strong>Name:</strong> Muhammad Saad Raza</p>
+        <p><strong>Contact:</strong> 0333-2858292</p>
+        <p><strong>Email:</strong> saadforyou20@gmail.com</p>
+      </div>
+      
+      <button class="toggle-btn" onclick="toggleSection('personal-info', this)">Hide</button>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="resume-section">
+      <h2>Education</h2>
+      <div>
+        <p><strong>Degree:</strong> Matric in Computer Science</p>
+        <p><strong>School:</strong> The educators</p>
+      </div>
+      
+      <button class="toggle-btn" onclick="toggleSection('education', this)">Hide</button>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="resume-section">
+      <h2>Skills</h2>
+      <div>
+        <ul>
+          <li>Frontend web development</li>
+          <li>Html</li>
+          <li>Css</li>
+          <li>Graphic Designing</li>
+          <li>Next.Js</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
+      <button class="toggle-btn" onclick="toggleSection('skills', this)">Hide</button>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience" class="resume-section">
+      <h2>Work Experience</h2>
+      <div>
+        <p><strong>6 months of experience working as a Freelancer</strong> (Graphic Designer)</p>
+      </div>
+      <button class="toggle-btn" onclick="toggleSection('work-experience', this)">Hide</button>
+    </section>
+  </div>
+
+  <script>
+    function toggleSection(sectionId, button) {
+      var section = document.getElementById(sectionId);
+      var content = section.querySelector('div'); // Get the div inside the section
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        button.textContent = 'Hide';
+      } else {
+        content.style.display = 'none';
+        button.textContent = 'Show';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* General Styles */
+:root {
+    --primary-color: #ff5722; /* Vibrant orange */
+    --secondary-color: #007bff; /* Bright blue */
+    --background-gradient: linear-gradient(135deg, #c4bf9b, #db7ff1); /* Soft gradient */
+    --card-bg-color: #ffffff; /* Clean white */
+    --text-color: #333; /* Dark gray for text */
+    --input-bg-color: #f8f9fa; /* Very light gray */
+    --border-color: #ddd; /* Light gray for borders */
+    --hover-bg-color: #e64a19; /* Darker orange for hover */
+    --active-bg-color: #388e3c; /* Green for active */
+    --disabled-bg-color: #d32f2f; /* Red for disabled */
+    --grooming-light-on: #4caf50; /* Green when on */
+    --grooming-light-off: #f44336; /* Red when off */
+  }
+  
+  /* General Body */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(./Image/background-copy.jfif);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-image: url(./Image/background-copy.jfif);
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+    border: 1px solid var(--border-color);
+    background: linear-gradient(145deg, #49ffe7, #fce563); /* Subtle gradient */
+  }
+  
+  /* Headings */
+  h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2, h3 {
+    color: var(--secondary-color);
+  }
+  
+  /* Form Section */
+  .form-section {
+    margin-bottom: 40px;
+    background-color: #f9f9f9; /* Light background for form sections */
+    border-radius: 15px; /* Rounded corners for form sections */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+  }
+  
+  /* Label Styling */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  /* Inputs and Textareas */
+  input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* More rounded corners */
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.25);
+  }
+  
+  /* Buttons */
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+  }
+  
+  button:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: var(--active-bg-color);
+    transform: translateY(0);
+  }
+  
+  button:disabled {
+    background-color: var(--disabled-bg-color);
+    cursor: not-allowed;
+  }
+  
+  /* Resume Display Section */
+  .resume {
+    background-color: var(--card-bg-color);
+    padding: 25px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    margin-top: 40px;
+  }
+  
+  /* Share Link Section */
+  #share-link-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  #share-link {
+    display: block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  #share-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Grooming Light Effect for Resume Generate Button */
+  button#grooming-light {
+    background-color: var(--grooming-light-on);
+  }
+  
+  button#grooming-light.off {
+    background-color: var(--grooming-light-off);
+  }
+  
+  button#grooming-light:hover {
+    background-color: darken(var(--grooming-light-on), 10%);
+  }
+  
+  button#grooming-light.off:hover {
+    background-color: darken(var(--grooming-light-off), 10%);
+  }
+  
+  /* Grooming Light Effect for Checked Inputs */
+  input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: var(--secondary-color);
+  }
+  
+  input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 35px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] + label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-bg-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  input[type="checkbox"]:checked + label::before {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: rgb(231, 217, 137);
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    input, textarea {
+      font-size: 15px;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+  
+    .resume {
+      padding: 20px;
+    }
+  
+    .resume h2, .resume h3 {
+      font-size: 20px;
+    }
+  
+    .resume p {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    input, textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .resume h2, .resume h3 {
+      font-size: 18px;
+    }
+  
+    .resume p {
+      font-size: 14px;
+    }
+  }

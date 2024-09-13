@@ -1,0 +1,196 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(./Image/background-copy.jfif); /* Soft, feminine gradient */
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Main Container */
+  .main-container {
+    max-width: 900px; /* Adjusted max-width for better proportions */
+    width: 100%;
+    background: #ffffff; /* Clean white background */
+    padding: 40px;
+    border-radius: 25px; /* Rounded corners for a soft look */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    animation: fadeIn 1s ease;
+    background: linear-gradient(135deg, #fef6f6, #fdfbfb); /* Soft gradient background */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    color: #e67e8a; /* Soft pink color */
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Section */
+  .form-section {
+    margin-bottom: 30px;
+    background-color: #ffffff; /* White background for form sections */
+    border-radius: 20px; /* Rounded corners for form sections */
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+  }
+  
+  /* Label Styling */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Inputs and Textareas */
+  input, textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #dcdcdc; /* Light gray border */
+    border-radius: 12px; /* More rounded corners */
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #e67e8a; /* Soft pink focus color */
+    box-shadow: 0 4px 12px rgba(230, 126, 138, 0.3); /* Soft shadow on focus */
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    background: linear-gradient(135deg, #e67e8a, #f5a6b8); /* Gradient button */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(230, 126, 138, 0.3); /* Shadow effect on hover */
+  }
+  
+  button:active {
+    background: linear-gradient(135deg, #f5a6b8, #e67e8a); /* Reversed gradient on click */
+    transform: scale(1);
+  }
+  
+  button:disabled {
+    background: #d3d3d3; /* Gray background for disabled state */
+    cursor: not-allowed;
+  }
+  
+  /* Resume Display */
+  .resume {
+    display: none;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fdfbfb; /* Very light pink */
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid #e67e8a; /* Matching border color */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: all 0.5s ease;
+  }
+  
+  .resume.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #e67e8a; /* Soft pink color */
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Editable Text */
+  .editable {
+    display: inline-block;
+    padding: 5px;
+    border-bottom: 1px dashed #e67e8a; /* Matching border color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editable:hover {
+    background-color: #fff4f4; /* Light background on hover */
+    border-bottom: 2px solid #e67e8a; /* More pronounced border on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    button {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    input, textarea {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
